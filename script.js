@@ -104,7 +104,7 @@ const disciples = [
     died: "ca. 65 e.Kr.",
     death: "Tradisjonelt sagt drept som martyr, ofte med kølle eller øks.",
     birthplace: "Ukjent, trolig Galilea",
-    books: "Judasbrevet tilskrives tradisjonelt Judas, men identifikasjonen er omdiskutert.",
+    books: "Judasbrevet tilskrives tradisjonelt Judas.",
     palette: ["#5f4437", "#d4b585", "#c07d4c", "#f2e8d1"],
     image: "Pictures/Taddeus.jpg",
     imagePosition: "center 15%"
