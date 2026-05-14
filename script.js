@@ -81,7 +81,8 @@ const disciples = [
     books: "Ingen bibelbøker i Bibelen er regnet som skrevet av Tomas.",
     palette: ["#5d4334", "#d6b27a", "#b2754d", "#f5e7c7"],
     image: "Pictures/Tomas.png",
-    imagePosition: "center 14%"
+    imagePosition: "center 12%",
+    imageScale: "1.12"
   },
   {
     name: "Matteus",
@@ -199,6 +200,10 @@ disciples.forEach((disciple) => {
 
   if (disciple.imagePosition) {
     portrait.style.setProperty("--portrait-position", disciple.imagePosition);
+  }
+
+  if (disciple.imageScale) {
+    portrait.style.setProperty("--portrait-scale", disciple.imageScale);
   }
 
   portrait.addEventListener("error", () => {
