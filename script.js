@@ -102,7 +102,9 @@ const disciples = [
     birthplace: "Ukjent, trolig Galilea",
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker kan sikkert knyttes til denne Jakob.",
-    palette: ["#554337", "#cbb084", "#a46f46", "#efe1c4"]
+    palette: ["#554337", "#cbb084", "#a46f46", "#efe1c4"],
+    image: "Pictures/Jakob alfeus sønn.png",
+    imagePosition: "center 15%"
   },
   {
     name: "Taddeus / Judas, Jakobs sønn",
