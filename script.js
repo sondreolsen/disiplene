@@ -7,6 +7,7 @@ const disciples = [
     birthplace: "Betsaida i Galilea",
     books: "1. og 2. Petersbrev. Markusevangeliet forbindes også ofte med Peters forkynnelse.",
     palette: ["#70503a", "#d3b27b", "#c78e53", "#ede0c4"],
+    image: "Pictures/simonpeter.png",
     video: "Pictures/simonpetervideo.mp4"
   },
   {
@@ -165,15 +166,30 @@ disciples.forEach((disciple) => {
   const names = fragment.querySelectorAll(".disciple-name");
   const detail = fragment.querySelector(".disciple-detail");
 
-  if (disciple.video) {
-    portraitFrame.classList.add("has-video");
-    portraitVideo.src = disciple.video;
-    portraitVideo.poster = "Pictures/simonpeter.png";
-    portraitVideo.setAttribute("aria-label", `Video av ${disciple.name}`);
-    portraitVideo.play().catch(() => {});
+  if (disciple.image) {
+    portrait.src = disciple.image;
+    portrait.alt = `Portrett av ${disciple.name}`;
   } else {
     portrait.src = createPortraitSvg(disciple.name, disciple.palette);
     portrait.alt = `Illustrert portrett av ${disciple.name}`;
+  }
+
+  if (disciple.video) {
+    portraitVideo.src = disciple.video;
+    portraitVideo.poster = disciple.image;
+    portraitVideo.setAttribute("aria-label", `Video av ${disciple.name}`);
+    portraitVideo.autoplay = true;
+    portraitVideo.addEventListener("loadeddata", () => {
+      portraitFrame.classList.add("video-ready");
+    });
+    portraitVideo.addEventListener("canplay", () => {
+      portraitFrame.classList.add("video-ready");
+      portraitVideo.play().catch(() => {});
+    });
+    portraitVideo.addEventListener("error", () => {
+      portraitFrame.classList.remove("video-ready");
+    });
+    portraitVideo.load();
   }
 
   names.forEach((nameEl) => {

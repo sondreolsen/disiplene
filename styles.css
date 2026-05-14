@@ -113,7 +113,7 @@ h1 {
 }
 
 .card-front {
-  justify-content: space-between;
+  justify-content: flex-start;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.38), transparent 18%),
     linear-gradient(180deg, #f8edd5, #f1dfb8);
@@ -134,12 +134,15 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 18px 18px 10px;
+  flex: 1;
+  min-height: 0;
+  padding: 14px 14px 8px;
+  position: relative;
 }
 
 .portrait {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
   border-radius: 18px;
   background: #dbc49d;
@@ -147,21 +150,27 @@ h1 {
 }
 
 .portrait-video {
-  display: none;
-}
-
-.portrait-frame.has-video .portrait {
-  display: none;
-}
-
-.portrait-frame.has-video .portrait-video {
   display: block;
+  position: absolute;
+  inset: 14px 14px 8px;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portrait-frame.video-ready .portrait-video {
+  opacity: 1;
+}
+
+.portrait-frame.video-ready .portrait {
+  opacity: 0;
 }
 
 .disciple-name {
   display: block;
   width: 100%;
-  padding: 0 16px 20px;
+  padding: 2px 16px 16px;
   text-align: center;
   font-family: "Cinzel", serif;
   font-size: 1.14rem;
@@ -215,6 +224,10 @@ h1 {
   .disciple-card,
   .card-inner {
     min-height: 350px;
+  }
+
+  .portrait-video {
+    inset: 14px 14px 8px;
   }
 
   .intro {
