@@ -64,6 +64,11 @@ body {
   color: #171411;
 }
 
+.verse-mobile-only {
+  display: none;
+  margin-top: 22px;
+}
+
 .verse-reference {
   margin: 0 0 8px;
   font-family: "Playfair Display", serif;
@@ -293,6 +298,14 @@ h1 {
 
   .verse-text {
     font-size: 1.21rem;
+  }
+
+  .verse-right {
+    display: none;
+  }
+
+  .verse-mobile-only {
+    display: block;
   }
 }
 
