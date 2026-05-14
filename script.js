@@ -7,8 +7,7 @@ const disciples = [
     birthplace: "Betsaida i Galilea",
     books: "1. og 2. Petersbrev. Markusevangeliet forbindes også ofte med Peters forkynnelse.",
     palette: ["#70503a", "#d3b27b", "#c78e53", "#ede0c4"],
-    image: "Pictures/simonpeter.png",
-    video: "Pictures/simonpetervideo.mp4"
+    image: "Pictures/simonpeter.png"
   },
   {
     name: "Andreas",
@@ -113,11 +112,6 @@ const disciples = [
 
 const template = document.querySelector("#disciple-card-template");
 const grid = document.querySelector("#disciples-grid");
-const videoModal = document.querySelector("#video-modal");
-const videoModalTitle = document.querySelector("#video-modal-title");
-const videoModalPlayer = document.querySelector("#video-modal-player");
-const videoModalLink = document.querySelector("#video-modal-link");
-const videoModalClose = document.querySelector("#video-modal-close");
 
 function createPortraitSvg(name, palette) {
   const [robe, skin, hair, bg] = palette;
@@ -161,28 +155,6 @@ function buildDetailMarkup(disciple) {
   `;
 }
 
-function openVideoModal(disciple) {
-  videoModalTitle.textContent = `Video: ${disciple.name}`;
-  videoModalPlayer.src = disciple.video;
-  videoModalLink.href = disciple.video;
-  videoModal.showModal();
-  videoModalPlayer.play().catch(() => {});
-}
-
-function closeVideoModal() {
-  videoModalPlayer.pause();
-  videoModalPlayer.removeAttribute("src");
-  videoModalPlayer.load();
-  videoModal.close();
-}
-
-videoModalClose.addEventListener("click", closeVideoModal);
-videoModal.addEventListener("click", (event) => {
-  if (event.target === videoModal) {
-    closeVideoModal();
-  }
-});
-
 disciples.forEach((disciple) => {
   const fragment = template.content.cloneNode(true);
   const card = fragment.querySelector(".disciple-card");
@@ -190,7 +162,6 @@ disciples.forEach((disciple) => {
   const portrait = fragment.querySelector(".portrait");
   const names = fragment.querySelectorAll(".disciple-name");
   const detail = fragment.querySelector(".disciple-detail");
-  const videoTrigger = fragment.querySelector(".video-trigger");
 
   if (disciple.image) {
     portrait.src = disciple.image;
@@ -217,14 +188,6 @@ disciples.forEach((disciple) => {
     const isFlipped = card.classList.toggle("is-flipped");
     button.setAttribute("aria-pressed", String(isFlipped));
   });
-
-  if (disciple.video) {
-    videoTrigger.hidden = false;
-    videoTrigger.addEventListener("click", (event) => {
-      event.stopPropagation();
-      openVideoModal(disciple);
-    });
-  }
 
   grid.appendChild(fragment);
 });
