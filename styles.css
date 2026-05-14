@@ -54,7 +54,7 @@ h1 {
 .intro {
   width: min(820px, 100%);
   margin: 16px auto 0;
-  font-size: 2.16rem;
+  font-size: 1.94rem;
   line-height: 1.65;
   color: var(--text-soft);
 }
@@ -208,7 +208,7 @@ h1 {
     min-height: 350px;
   }
   .intro {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
