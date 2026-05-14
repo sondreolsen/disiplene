@@ -55,7 +55,9 @@ const disciples = [
     birthplace: "Betsaida i Galilea",
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker er regnet som skrevet av Filip.",
-    palette: ["#544236", "#d0b07f", "#c48d58", "#f2e6ca"]
+    palette: ["#544236", "#d0b07f", "#c48d58", "#f2e6ca"],
+    image: "Pictures/filip.png",
+    imagePosition: "center 14%"
   },
   {
     name: "Bartolomeus",
@@ -65,7 +67,9 @@ const disciples = [
     birthplace: "Tradisjonelt knyttet til Kana i Galilea",
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker er regnet som skrevet av Bartolomeus.",
-    palette: ["#57473b", "#d1b07f", "#9f7149", "#f2e5cd"]
+    palette: ["#57473b", "#d1b07f", "#9f7149", "#f2e5cd"],
+    image: "Pictures/Bartolomeus.png",
+    imagePosition: "center 16%"
   },
   {
     name: "Tomas",
@@ -75,7 +79,9 @@ const disciples = [
     birthplace: "Ukjent, trolig Galilea",
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker i Bibelen er regnet som skrevet av Tomas.",
-    palette: ["#5d4334", "#d6b27a", "#b2754d", "#f5e7c7"]
+    palette: ["#5d4334", "#d6b27a", "#b2754d", "#f5e7c7"],
+    image: "Pictures/Tomas.png",
+    imagePosition: "center 14%"
   },
   {
     name: "Matteus",
