@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesu 12 disipler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Interaktiv oversikt</p>
+      <h1>Jesu 12 disipler</h1>
+      <p class="intro">
+        Trykk på et kort for å snu det. Forsiden viser portrett og navn, mens baksiden
+        viser tradisjonelle opplysninger om fødsel, død, dødsårsak, fødested og hvilke
+        bibelske bøker disippelen forbindes med.
+      </p>
+    </header>
+
+    <section class="disciples-grid" id="disciples-grid" aria-label="De tolv disiplene"></section>
+  </main>
+
+  <template id="disciple-card-template">
+    <article class="disciple-card">
+      <button class="card-toggle" type="button">
+        <span class="sr-only">Vis mer informasjon</span>
+        <span class="card-inner">
+          <span class="card-face card-front">
+            <span class="portrait-frame">
+              <img class="portrait" alt="">
+            </span>
+            <span class="disciple-name"></span>
+          </span>
+          <span class="card-face card-back">
+            <span class="disciple-name disciple-name-back"></span>
+            <span class="disciple-detail"></span>
+          </span>
+        </span>
+      </button>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
