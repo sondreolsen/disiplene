@@ -5,6 +5,7 @@ const disciples = [
     died: "ca. 64–68 e.Kr.",
     death: "Tradisjonelt sagt korsfestet opp ned i Roma.",
     birthplace: "Betsaida i Galilea",
+    occupation: "Fisker.",
     books: "1. og 2. Petersbrev. Markusevangeliet forbindes også ofte med Peters forkynnelse.",
     palette: ["#70503a", "#d3b27b", "#c78e53", "#ede0c4"],
     image: "Pictures/simonpeter.png",
@@ -16,6 +17,7 @@ const disciples = [
     died: "ca. 60–70 e.Kr.",
     death: "Tradisjonelt sagt korsfestet i Patras i Hellas.",
     birthplace: "Betsaida i Galilea",
+    occupation: "Fisker.",
     books: "Ingen bibelbøker er regnet som skrevet av Andreas.",
     palette: ["#5e4437", "#cba675", "#b97a48", "#f2e3bf"],
     image: "Pictures/andreas.png",
@@ -27,6 +29,7 @@ const disciples = [
     died: "ca. 44 e.Kr.",
     death: "Henrettet med sverd i Jerusalem under Herodes Agrippa I.",
     birthplace: "Trolig Galilea",
+    occupation: "Fisker, sammen med sin bror Johannes og faren Sebedeus.",
     books: "Ingen bibelbøker er regnet som skrevet av denne Jakob.",
     palette: ["#604437", "#d1a86e", "#8b5a3e", "#f0dfc2"],
     image: "Pictures/jakob sebedeus sønn.png",
@@ -38,6 +41,7 @@ const disciples = [
     died: "ca. 90–100 e.Kr.",
     death: "Tradisjonelt sagt å ha dødd av høy alder i Efesos.",
     birthplace: "Trolig Galilea",
+    occupation: "Fisker, sammen med sin bror Jakob og faren Sebedeus.",
     books: "Johannesevangeliet, 1., 2. og 3. Johannesbrev og Åpenbaringen tilskrives tradisjonelt Johannes.",
     palette: ["#4f483e", "#cdb58f", "#9a6d47", "#f1e7cf"],
     image: "Pictures/Johannes.png",
@@ -49,6 +53,7 @@ const disciples = [
     died: "ca. 80 e.Kr.",
     death: "Tradisjonelt sagt martyrdrept i Hierapolis.",
     birthplace: "Betsaida i Galilea",
+    occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker er regnet som skrevet av Filip.",
     palette: ["#544236", "#d0b07f", "#c48d58", "#f2e6ca"]
   },
@@ -58,6 +63,7 @@ const disciples = [
     died: "ca. 68 e.Kr.",
     death: "Tradisjonene varierer, ofte sagt flådd og deretter drept.",
     birthplace: "Tradisjonelt knyttet til Kana i Galilea",
+    occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker er regnet som skrevet av Bartolomeus.",
     palette: ["#57473b", "#d1b07f", "#9f7149", "#f2e5cd"]
   },
@@ -67,6 +73,7 @@ const disciples = [
     died: "ca. 72 e.Kr.",
     death: "Tradisjonelt sagt drept med spyd i India.",
     birthplace: "Ukjent, trolig Galilea",
+    occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker i Bibelen er regnet som skrevet av Tomas.",
     palette: ["#5d4334", "#d6b27a", "#b2754d", "#f5e7c7"]
   },
@@ -76,6 +83,7 @@ const disciples = [
     died: "ca. 60–70 e.Kr.",
     death: "Tradisjonene varierer; ofte sagt å ha dødd som martyr.",
     birthplace: "Kapernaum eller området rundt Galilea",
+    occupation: "Toller eller skatteinnkrever.",
     books: "Matteusevangeliet tilskrives tradisjonelt Matteus.",
     palette: ["#5d483a", "#cfa976", "#8f603d", "#f1dfc0"]
   },
@@ -85,6 +93,7 @@ const disciples = [
     died: "ca. 62 e.Kr.",
     death: "Tradisjonene varierer; ofte sagt å ha blitt steinet eller slått i hjel.",
     birthplace: "Ukjent, trolig Galilea",
+    occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker kan sikkert knyttes til denne Jakob.",
     palette: ["#554337", "#cbb084", "#a46f46", "#efe1c4"]
   },
@@ -94,6 +103,7 @@ const disciples = [
     died: "ca. 65 e.Kr.",
     death: "Tradisjonelt sagt drept som martyr, ofte med kølle eller øks.",
     birthplace: "Ukjent, trolig Galilea",
+    occupation: "Ikke sikkert kjent.",
     books: "Judasbrevet tilskrives tradisjonelt Judas, men identifikasjonen er omdiskutert.",
     palette: ["#5f4437", "#d4b585", "#c07d4c", "#f2e8d1"]
   },
@@ -103,6 +113,7 @@ const disciples = [
     died: "ca. 65–74 e.Kr.",
     death: "Tradisjonene varierer; ofte sagt å ha lidd martyrdøden under misjon.",
     birthplace: "Ukjent, trolig Galilea",
+    occupation: "Muligens knyttet til selotene eller en sterk jødisk nasjonal bevegelse, men dette er usikkert.",
     books: "Ingen bibelbøker er regnet som skrevet av Simon Seloten.",
     palette: ["#564336", "#d1aa75", "#956342", "#efe2c5"]
   },
@@ -112,6 +123,7 @@ const disciples = [
     died: "ca. 30–33 e.Kr.",
     death: "Døde etter forræderiet mot Jesus; evangeliene beskriver døden ulikt.",
     birthplace: "Muligens Keriot i Judea",
+    occupation: "Ikke sikkert kjent før han møtte Jesus.",
     books: "Ingen bibelbøker er regnet som skrevet av Judas Iskariot.",
     palette: ["#4c3b35", "#b08f69", "#7d5141", "#e8d8b7"]
   }
@@ -154,6 +166,7 @@ function createPortraitSvg(name, palette) {
 
 function buildDetailMarkup(disciple) {
   return `
+    <strong>Yrke før Jesus:</strong> ${disciple.occupation}<br>
     <strong>Født:</strong> ${disciple.born}<br>
     <strong>Døde:</strong> ${disciple.died}<br>
     <strong>Dødsårsak:</strong> ${disciple.death}<br>
