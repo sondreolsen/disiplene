@@ -51,7 +51,7 @@ const disciples = [
     birthplace: "Betsaida i Galilea",
     books: "Ingen bibelbøker er regnet som skrevet av Filip.",
     palette: ["#544236", "#d0b07f", "#c48d58", "#f2e6ca"],
-    image: "Pictures/Filip.jpg",
+    image: "Pictures/filip.jpg",
     imagePosition: "center 14%"
   },
   {
