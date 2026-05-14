@@ -174,7 +174,7 @@ function buildDetailMarkup(disciple) {
     <strong>Døde:</strong> ${disciple.died}<br>
     <strong>Dødsårsak:</strong> ${disciple.death}<br>
     <strong>Fødested:</strong> ${disciple.birthplace}<br>
-    <strong>Bibelske skrifter:</strong> ${disciple.books}
+    <strong>Bøker:</strong> ${disciple.books}
   `;
 }
 
