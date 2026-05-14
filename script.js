@@ -82,7 +82,7 @@ const disciples = [
     died: "ca. 60–70 e.Kr.",
     death: "Tradisjonene varierer; ofte sagt å ha dødd som martyr.",
     birthplace: "Kapernaum eller området rundt Galilea",
-    books: "Matteusevangeliet tilskrives tradisjonelt Matteus.",
+    books: "Matteusevangeliet",
     palette: ["#5d483a", "#cfa976", "#8f603d", "#f1dfc0"],
     image: "Pictures/Matteus.jpg",
     imagePosition: "center 14%"
