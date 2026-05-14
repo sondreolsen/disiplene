@@ -38,7 +38,7 @@ const disciples = [
     died: "ca. 90–100 e.Kr.",
     death: "Tradisjonelt sagt å ha dødd av høy alder i Efesos.",
     birthplace: "Trolig Galilea",
-    books: "Johannesevangeliet, 1., 2. og 3. Johannesbrev og Åpenbaringen tilskrives tradisjonelt Johannes.",
+    books: "Johannesevangeliet, 1., 2. og 3. Johannesbrev og Åpenbaringen tilskrives Johannes.",
     palette: ["#4f483e", "#cdb58f", "#9a6d47", "#f1e7cf"],
     image: "Pictures/Johannes.jpg",
     imagePosition: "center 16%"
