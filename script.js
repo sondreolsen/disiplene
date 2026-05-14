@@ -56,7 +56,7 @@ const disciples = [
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker er regnet som skrevet av Filip.",
     palette: ["#544236", "#d0b07f", "#c48d58", "#f2e6ca"],
-    image: "Pictures/Filip disippel.jpg",
+    image: "Pictures/Filip.jpg",
     imagePosition: "center 14%"
   },
   {
