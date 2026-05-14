@@ -114,7 +114,9 @@ const disciples = [
     birthplace: "Ukjent, trolig Galilea",
     occupation: "Ikke sikkert kjent.",
     books: "Judasbrevet tilskrives tradisjonelt Judas, men identifikasjonen er omdiskutert.",
-    palette: ["#5f4437", "#d4b585", "#c07d4c", "#f2e8d1"]
+    palette: ["#5f4437", "#d4b585", "#c07d4c", "#f2e8d1"],
+    image: "Pictures/Taddeus.png",
+    imagePosition: "center 15%"
   },
   {
     name: "Simon Seloten",
