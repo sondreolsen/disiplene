@@ -74,8 +74,7 @@ const disciples = [
     books: "Ingen bibelbøker i Bibelen er regnet som skrevet av Tomas.",
     palette: ["#5d4334", "#d6b27a", "#b2754d", "#f5e7c7"],
     image: "Pictures/Tomas.jpg",
-    imagePosition: "center 10%",
-    imageScale: "1.05"
+    imagePosition: "center 10%"
   },
   {
     name: "Matteus",
