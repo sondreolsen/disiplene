@@ -92,7 +92,9 @@ const disciples = [
     birthplace: "Kapernaum eller området rundt Galilea",
     occupation: "Toller eller skatteinnkrever.",
     books: "Matteusevangeliet tilskrives tradisjonelt Matteus.",
-    palette: ["#5d483a", "#cfa976", "#8f603d", "#f1dfc0"]
+    palette: ["#5d483a", "#cfa976", "#8f603d", "#f1dfc0"],
+    image: "Pictures/Matteus.png",
+    imagePosition: "center 14%"
   },
   {
     name: "Jakob, Alfeus' sønn",
@@ -138,7 +140,9 @@ const disciples = [
     birthplace: "Muligens Keriot i Judea",
     occupation: "Ikke sikkert kjent før han møtte Jesus.",
     books: "Ingen bibelbøker er regnet som skrevet av Judas Iskariot.",
-    palette: ["#4c3b35", "#b08f69", "#7d5141", "#e8d8b7"]
+    palette: ["#4c3b35", "#b08f69", "#7d5141", "#e8d8b7"],
+    image: "Pictures/Judas Iskariot.png",
+    imagePosition: "center 14%"
   }
 ];
 
