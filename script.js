@@ -7,7 +7,8 @@ const disciples = [
     birthplace: "Betsaida i Galilea",
     books: "1. og 2. Petersbrev. Markusevangeliet forbindes også ofte med Peters forkynnelse.",
     palette: ["#70503a", "#d3b27b", "#c78e53", "#ede0c4"],
-    image: "Pictures/simonpeter.png"
+    image: "Pictures/simonpeter.png",
+    imagePosition: "center 12%"
   },
   {
     name: "Andreas",
@@ -169,6 +170,10 @@ disciples.forEach((disciple) => {
   } else {
     portrait.src = createPortraitSvg(disciple.name, disciple.palette);
     portrait.alt = `Illustrert portrett av ${disciple.name}`;
+  }
+
+  if (disciple.imagePosition) {
+    portrait.style.setProperty("--portrait-position", disciple.imagePosition);
   }
 
   portrait.addEventListener("error", () => {

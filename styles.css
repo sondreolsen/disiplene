@@ -141,9 +141,11 @@ h1 {
 }
 
 .portrait {
+  --portrait-position: center 20%;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: var(--portrait-position);
   border-radius: 18px;
   background: #dbc49d;
   border: 1px solid rgba(98, 64, 28, 0.12);
