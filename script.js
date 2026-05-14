@@ -8,7 +8,7 @@ const disciples = [
     occupation: "Fisker.",
     books: "1. og 2. Petersbrev. Markusevangeliet forbindes også ofte med Peters forkynnelse.",
     palette: ["#70503a", "#d3b27b", "#c78e53", "#ede0c4"],
-    image: "Pictures/simonpeter.png",
+    image: "Pictures/simonpeter.jpg",
     imagePosition: "center 12%"
   },
   {
@@ -20,7 +20,7 @@ const disciples = [
     occupation: "Fisker.",
     books: "Ingen bibelbøker er regnet som skrevet av Andreas.",
     palette: ["#5e4437", "#cba675", "#b97a48", "#f2e3bf"],
-    image: "Pictures/andreas.png",
+    image: "Pictures/andreas.jpg",
     imagePosition: "center 18%"
   },
   {
@@ -32,7 +32,7 @@ const disciples = [
     occupation: "Fisker, sammen med sin bror Johannes og faren Sebedeus.",
     books: "Ingen bibelbøker er regnet som skrevet av denne Jakob.",
     palette: ["#604437", "#d1a86e", "#8b5a3e", "#f0dfc2"],
-    image: "Pictures/jakob sebedeus sønn.png",
+    image: "Pictures/jakob sebedeus sønn.jpg",
     imagePosition: "center 14%"
   },
   {
@@ -44,7 +44,7 @@ const disciples = [
     occupation: "Fisker, sammen med sin bror Jakob og faren Sebedeus.",
     books: "Johannesevangeliet, 1., 2. og 3. Johannesbrev og Åpenbaringen tilskrives tradisjonelt Johannes.",
     palette: ["#4f483e", "#cdb58f", "#9a6d47", "#f1e7cf"],
-    image: "Pictures/Johannes.png",
+    image: "Pictures/Johannes.jpg",
     imagePosition: "center 16%"
   },
   {
@@ -56,7 +56,7 @@ const disciples = [
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker er regnet som skrevet av Filip.",
     palette: ["#544236", "#d0b07f", "#c48d58", "#f2e6ca"],
-    image: "Pictures/filip.png",
+    image: "Pictures/filip.jpg",
     imagePosition: "center 14%"
   },
   {
@@ -68,7 +68,7 @@ const disciples = [
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker er regnet som skrevet av Bartolomeus.",
     palette: ["#57473b", "#d1b07f", "#9f7149", "#f2e5cd"],
-    image: "Pictures/Bartolomeus.png",
+    image: "Pictures/Bartolomeus.jpg",
     imagePosition: "center 16%"
   },
   {
@@ -80,7 +80,7 @@ const disciples = [
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker i Bibelen er regnet som skrevet av Tomas.",
     palette: ["#5d4334", "#d6b27a", "#b2754d", "#f5e7c7"],
-    image: "Pictures/Tomas.png",
+    image: "Pictures/Tomas.jpg",
     imagePosition: "center 10%",
     imageScale: "1.05"
   },
@@ -93,7 +93,7 @@ const disciples = [
     occupation: "Toller eller skatteinnkrever.",
     books: "Matteusevangeliet tilskrives tradisjonelt Matteus.",
     palette: ["#5d483a", "#cfa976", "#8f603d", "#f1dfc0"],
-    image: "Pictures/Matteus.png",
+    image: "Pictures/Matteus.jpg",
     imagePosition: "center 14%"
   },
   {
@@ -105,7 +105,7 @@ const disciples = [
     occupation: "Ikke sikkert kjent.",
     books: "Ingen bibelbøker kan sikkert knyttes til denne Jakob.",
     palette: ["#554337", "#cbb084", "#a46f46", "#efe1c4"],
-    image: "Pictures/Jakob alfeus sønn.png",
+    image: "Pictures/Jakob alfeus sønn.jpg",
     imagePosition: "center 15%"
   },
   {
@@ -117,7 +117,7 @@ const disciples = [
     occupation: "Ikke sikkert kjent.",
     books: "Judasbrevet tilskrives tradisjonelt Judas, men identifikasjonen er omdiskutert.",
     palette: ["#5f4437", "#d4b585", "#c07d4c", "#f2e8d1"],
-    image: "Pictures/Taddeus.png",
+    image: "Pictures/Taddeus.jpg",
     imagePosition: "center 15%"
   },
   {
@@ -129,7 +129,7 @@ const disciples = [
     occupation: "Muligens knyttet til selotene eller en sterk jødisk nasjonal bevegelse.",
     books: "Ingen bibelbøker er regnet som skrevet av Simon Seloten.",
     palette: ["#564336", "#d1aa75", "#956342", "#efe2c5"],
-    image: "Pictures/Simon seloten.png",
+    image: "Pictures/Simon seloten.jpg",
     imagePosition: "center 15%"
   },
   {
@@ -141,7 +141,7 @@ const disciples = [
     occupation: "Ikke sikkert kjent før han møtte Jesus.",
     books: "Ingen bibelbøker er regnet som skrevet av Judas Iskariot.",
     palette: ["#4c3b35", "#b08f69", "#7d5141", "#e8d8b7"],
-    image: "Pictures/Judas Iskariot.png",
+    image: "Pictures/Judas Iskariot.jpg",
     imagePosition: "center 14%"
   }
 ];
@@ -192,7 +192,7 @@ function buildDetailMarkup(disciple) {
   `;
 }
 
-disciples.forEach((disciple) => {
+disciples.forEach((disciple, index) => {
   const fragment = template.content.cloneNode(true);
   const card = fragment.querySelector(".disciple-card");
   const button = fragment.querySelector(".card-toggle");
@@ -214,6 +214,12 @@ disciples.forEach((disciple) => {
 
   if (disciple.imageScale) {
     portrait.style.setProperty("--portrait-scale", disciple.imageScale);
+  }
+
+  portrait.decoding = "async";
+  portrait.loading = index < 6 ? "eager" : "lazy";
+  if (index < 2) {
+    portrait.fetchPriority = "high";
   }
 
   portrait.addEventListener("error", () => {
