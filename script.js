@@ -124,7 +124,7 @@ const disciples = [
     name: "Judas Iskariot",
     born: "ca. 1–5 e.Kr.",
     died: "ca. 30–33 e.Kr.",
-    death: "Døde etter forræderiet mot Jesus; evangeliene beskriver døden ulikt.",
+    death: "Tok sitt eget liv etter å ha forrådet Jesus.",
     birthplace: "Muligens Keriot i Judea",
     books: "Ingen bibelbøker er regnet som skrevet av Judas Iskariot.",
     palette: ["#4c3b35", "#b08f69", "#7d5141", "#e8d8b7"],
