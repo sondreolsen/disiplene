@@ -17,7 +17,9 @@ const disciples = [
     death: "Tradisjonelt sagt korsfestet i Patras i Hellas.",
     birthplace: "Betsaida i Galilea",
     books: "Ingen bibelbøker er regnet som skrevet av Andreas.",
-    palette: ["#5e4437", "#cba675", "#b97a48", "#f2e3bf"]
+    palette: ["#5e4437", "#cba675", "#b97a48", "#f2e3bf"],
+    image: "Pictures/andreas.png",
+    imagePosition: "center 18%"
   },
   {
     name: "Jakob, Sebedeus' sønn",
@@ -26,7 +28,9 @@ const disciples = [
     death: "Henrettet med sverd i Jerusalem under Herodes Agrippa I.",
     birthplace: "Trolig Galilea",
     books: "Ingen bibelbøker er regnet som skrevet av denne Jakob.",
-    palette: ["#604437", "#d1a86e", "#8b5a3e", "#f0dfc2"]
+    palette: ["#604437", "#d1a86e", "#8b5a3e", "#f0dfc2"],
+    image: "Pictures/jakob sebedeus sønn.png",
+    imagePosition: "center 14%"
   },
   {
     name: "Johannes",
@@ -35,7 +39,9 @@ const disciples = [
     death: "Tradisjonelt sagt å ha dødd av høy alder i Efesos.",
     birthplace: "Trolig Galilea",
     books: "Johannesevangeliet, 1., 2. og 3. Johannesbrev og Åpenbaringen tilskrives tradisjonelt Johannes.",
-    palette: ["#4f483e", "#cdb58f", "#9a6d47", "#f1e7cf"]
+    palette: ["#4f483e", "#cdb58f", "#9a6d47", "#f1e7cf"],
+    image: "Pictures/Johannes.png",
+    imagePosition: "center 16%"
   },
   {
     name: "Filip",
