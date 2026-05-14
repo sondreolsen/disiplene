@@ -126,7 +126,9 @@ const disciples = [
     birthplace: "Ukjent, trolig Galilea",
     occupation: "Muligens knyttet til selotene eller en sterk jødisk nasjonal bevegelse, men dette er usikkert.",
     books: "Ingen bibelbøker er regnet som skrevet av Simon Seloten.",
-    palette: ["#564336", "#d1aa75", "#956342", "#efe2c5"]
+    palette: ["#564336", "#d1aa75", "#956342", "#efe2c5"],
+    image: "Pictures/Simon seloten.png",
+    imagePosition: "center 15%"
   },
   {
     name: "Judas Iskariot",
