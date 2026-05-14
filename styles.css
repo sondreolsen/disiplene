@@ -67,7 +67,7 @@ h1 {
 
 .disciple-card {
   perspective: 1600px;
-  min-height: 380px;
+  min-height: 418px;
 }
 
 .card-toggle {
@@ -90,7 +90,7 @@ h1 {
 .card-inner {
   position: relative;
   display: block;
-  min-height: 380px;
+  min-height: 418px;
   transform-style: preserve-3d;
   transition: transform 0.85s cubic-bezier(0.2, 0.75, 0.2, 1);
 }
@@ -211,7 +211,7 @@ h1 {
 
   .disciple-card,
   .card-inner {
-    min-height: 350px;
+    min-height: 385px;
   }
   .intro {
     font-size: 1.8rem;
@@ -225,6 +225,6 @@ h1 {
 
   .disciple-card,
   .card-inner {
-    min-height: 330px;
+    min-height: 363px;
   }
 }
