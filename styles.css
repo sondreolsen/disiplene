@@ -146,6 +146,18 @@ h1 {
   border: 1px solid rgba(98, 64, 28, 0.12);
 }
 
+.portrait-video {
+  display: none;
+}
+
+.portrait-frame.has-video .portrait {
+  display: none;
+}
+
+.portrait-frame.has-video .portrait-video {
+  display: block;
+}
+
 .disciple-name {
   display: block;
   width: 100%;

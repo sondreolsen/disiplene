@@ -6,7 +6,8 @@ const disciples = [
     death: "Tradisjonelt sagt korsfestet opp ned i Roma.",
     birthplace: "Betsaida i Galilea",
     books: "1. og 2. Petersbrev. Markusevangeliet forbindes også ofte med Peters forkynnelse.",
-    palette: ["#70503a", "#d3b27b", "#c78e53", "#ede0c4"]
+    palette: ["#70503a", "#d3b27b", "#c78e53", "#ede0c4"],
+    video: "Pictures/simonpetervideo.mp4"
   },
   {
     name: "Andreas",
@@ -158,12 +159,23 @@ disciples.forEach((disciple) => {
   const fragment = template.content.cloneNode(true);
   const card = fragment.querySelector(".disciple-card");
   const button = fragment.querySelector(".card-toggle");
+  const portraitFrame = fragment.querySelector(".portrait-frame");
   const portrait = fragment.querySelector(".portrait");
+  const portraitVideo = fragment.querySelector(".portrait-video");
   const names = fragment.querySelectorAll(".disciple-name");
   const detail = fragment.querySelector(".disciple-detail");
 
-  portrait.src = createPortraitSvg(disciple.name, disciple.palette);
-  portrait.alt = `Illustrert portrett av ${disciple.name}`;
+  if (disciple.video) {
+    portraitFrame.classList.add("has-video");
+    portraitVideo.src = disciple.video;
+    portraitVideo.poster = "Pictures/simonpeter.png";
+    portraitVideo.setAttribute("aria-label", `Video av ${disciple.name}`);
+    portraitVideo.play().catch(() => {});
+  } else {
+    portrait.src = createPortraitSvg(disciple.name, disciple.palette);
+    portrait.alt = `Illustrert portrett av ${disciple.name}`;
+  }
+
   names.forEach((nameEl) => {
     nameEl.textContent = disciple.name;
   });
