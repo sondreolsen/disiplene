@@ -93,7 +93,7 @@ h1 {
 .intro {
   width: min(820px, 100%);
   margin: 16px auto 0;
-  font-size: 1.94rem;
+  font-size: 1.75rem;
   line-height: 1.55;
   color: var(--text-soft);
   font-weight: 500;
@@ -288,7 +288,7 @@ h1 {
     min-height: 385px;
   }
   .intro {
-    font-size: 1.8rem;
+    font-size: 1.62rem;
   }
 
   .verse-text {
