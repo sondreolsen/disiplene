@@ -149,24 +149,6 @@ h1 {
   border: 1px solid rgba(98, 64, 28, 0.12);
 }
 
-.portrait-video {
-  display: block;
-  position: absolute;
-  inset: 14px 14px 8px;
-  width: auto;
-  height: auto;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.portrait-frame.video-ready .portrait-video {
-  opacity: 1;
-}
-
-.portrait-frame.video-ready .portrait {
-  opacity: 0;
-}
-
 .disciple-name {
   display: block;
   width: 100%;
@@ -190,6 +172,75 @@ h1 {
 
 .disciple-detail strong {
   color: var(--text-main);
+}
+
+.video-trigger {
+  margin-top: auto;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #8a5c31;
+  color: #fff9ed;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.video-modal {
+  width: min(760px, calc(100% - 24px));
+  padding: 0;
+  border: 0;
+  border-radius: 24px;
+  background: #fff9ed;
+  box-shadow: 0 30px 60px rgba(49, 30, 13, 0.32);
+}
+
+.video-modal::backdrop {
+  background: rgba(34, 22, 12, 0.58);
+}
+
+.video-modal-content {
+  position: relative;
+  padding: 24px;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(138, 92, 49, 0.14);
+  color: #6d4525;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.video-modal-title {
+  margin: 0 48px 16px 0;
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
+}
+
+.video-modal-player {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  border-radius: 18px;
+  background: #d9bf93;
+}
+
+.video-modal-fallback {
+  margin: 14px 0 0;
+  color: var(--text-soft);
+}
+
+.video-modal-link {
+  color: #8a5c31;
+  font-weight: 700;
 }
 
 .sr-only {
@@ -225,11 +276,6 @@ h1 {
   .card-inner {
     min-height: 350px;
   }
-
-  .portrait-video {
-    inset: 14px 14px 8px;
-  }
-
   .intro {
     font-size: 1rem;
   }

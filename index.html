@@ -29,18 +29,30 @@
           <span class="card-face card-front">
             <span class="portrait-frame">
               <img class="portrait" alt="">
-              <video class="portrait portrait-video" muted loop playsinline preload="metadata" aria-hidden="true"></video>
             </span>
             <span class="disciple-name"></span>
           </span>
           <span class="card-face card-back">
             <span class="disciple-name disciple-name-back"></span>
             <span class="disciple-detail"></span>
+            <button class="video-trigger" type="button" hidden>Se video</button>
           </span>
         </span>
       </button>
     </article>
   </template>
+
+  <dialog class="video-modal" id="video-modal">
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="video-modal-close" type="button" aria-label="Lukk video">×</button>
+      <h2 class="video-modal-title" id="video-modal-title">Video</h2>
+      <video class="video-modal-player" id="video-modal-player" controls playsinline preload="metadata"></video>
+      <p class="video-modal-fallback">
+        Hvis videoen ikke starter, kan du åpne den direkte her:
+        <a class="video-modal-link" id="video-modal-link" href="#" target="_blank" rel="noreferrer">Åpne video</a>
+      </p>
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
