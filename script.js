@@ -166,11 +166,11 @@ function createPortraitSvg(name, palette) {
 
 function buildDetailMarkup(disciple) {
   return `
-    <strong>Yrke før Jesus:</strong> ${disciple.occupation}<br>
     <strong>Født:</strong> ${disciple.born}<br>
     <strong>Døde:</strong> ${disciple.died}<br>
     <strong>Dødsårsak:</strong> ${disciple.death}<br>
     <strong>Fødested:</strong> ${disciple.birthplace}<br>
+    <strong>Yrke før Jesus:</strong> ${disciple.occupation}<br>
     <strong>Bibelske skrifter:</strong> ${disciple.books}
   `;
 }
