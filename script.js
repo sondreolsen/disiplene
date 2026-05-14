@@ -126,7 +126,7 @@ const disciples = [
     died: "ca. 65–74 e.Kr.",
     death: "Tradisjonene varierer; ofte sagt å ha lidd martyrdøden under misjon.",
     birthplace: "Ukjent, trolig Galilea",
-    occupation: "Muligens knyttet til selotene eller en sterk jødisk nasjonal bevegelse, men dette er usikkert.",
+    occupation: "Muligens knyttet til selotene eller en sterk jødisk nasjonal bevegelse.",
     books: "Ingen bibelbøker er regnet som skrevet av Simon Seloten.",
     palette: ["#564336", "#d1aa75", "#956342", "#efe2c5"],
     image: "Pictures/Simon seloten.png",
