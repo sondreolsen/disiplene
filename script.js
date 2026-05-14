@@ -5,7 +5,7 @@ const disciples = [
     died: "ca. 64–68 e.Kr.",
     death: "Tradisjonelt sagt korsfestet opp ned i Roma.",
     birthplace: "Betsaida i Galilea",
-    books: "1. og 2. Petersbrev. Markusevangeliet forbindes også ofte med Peters forkynnelse.",
+    books: "1. og 2. Petersbrev.",
     palette: ["#70503a", "#d3b27b", "#c78e53", "#ede0c4"],
     image: "Pictures/simonpeter.jpg",
     imagePosition: "center 12%"
