@@ -138,6 +138,7 @@ h1 {
   min-height: 0;
   padding: 14px 14px 8px;
   position: relative;
+  overflow: hidden;
 }
 
 .portrait {
